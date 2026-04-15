@@ -10,7 +10,7 @@ class BrandingConfig {
   const BrandingConfig({
     this.showPoweredBy = true,
     this.clickable = true,
-    this.url,
+    this.url='https://futxtech.com/',
     this.text = 'Powered by',
     this.showText = true,
     this.logoWidth = 76,

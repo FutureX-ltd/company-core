@@ -1,6 +1,6 @@
 name: company_core
 description: "Company shared Flutter package"
-version: 0.0.34
+version: 0.0.35
 homepage:
 
 environment:
