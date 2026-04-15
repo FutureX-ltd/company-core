@@ -10,9 +10,9 @@ void main() {
       expect(config.clickable, isTrue);
       expect(config.url, isNull);
       expect(config.text, 'Powered by');
-      expect(config.showText, isFalse);
-      expect(config.logoWidth, 120);
-      expect(config.logoHeight, 40);
+      expect(config.showText, isTrue);
+      expect(config.logoWidth, 76);
+      expect(config.logoHeight, 24);
     });
   });
 }

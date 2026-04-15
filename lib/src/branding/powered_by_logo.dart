@@ -8,8 +8,8 @@ class PoweredByLogo extends StatelessWidget {
 
   final String? url;
   final bool clickable;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
 
   const PoweredByLogo({
     super.key,

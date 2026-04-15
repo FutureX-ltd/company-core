@@ -13,7 +13,7 @@ class BrandingConfig {
     this.url,
     this.text = 'Powered by',
     this.showText = true,
-    this.logoWidth = 120,
-    this.logoHeight = 40,
+    this.logoWidth = 76,
+    this.logoHeight = 24,
   });
 }
