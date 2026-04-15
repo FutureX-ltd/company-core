@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PoweredByLogo extends StatelessWidget {
-  static const String _assetPath = 'assets/logos/logo.svg';
+  static const String _darkAssetPath = 'assets/logos/logo_dark.svg';
+  static const String _lightAssetPath = 'assets/logos/logo_light.svg';
 
   final String? url;
   final bool clickable;
@@ -35,8 +36,13 @@ class PoweredByLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final brightness = Theme.of(context).brightness;
+    final assetPath = brightness == Brightness.dark
+        ? _darkAssetPath
+        : _lightAssetPath;
+
     final logo = SvgPicture.asset(
-      _assetPath,
+      assetPath,
       package: 'company_core',
       width: width,
       height: height,

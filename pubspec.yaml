@@ -25,6 +25,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/logos/logo.svg
+    - assets/logos/logo_dark.svg
+    - assets/logos/logo_light.svg
 
   # To add assets to your package, add an assets section, like this:
   # assets:
