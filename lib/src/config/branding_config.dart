@@ -4,8 +4,8 @@ class BrandingConfig {
   final String? url;
   final String text;
   final bool showText;
-  final double logoWidth;
-  final double logoHeight;
+  final double? logoWidth;
+  final double? logoHeight;
 
   const BrandingConfig({
     this.showPoweredBy = true,
