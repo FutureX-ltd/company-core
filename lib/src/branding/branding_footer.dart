@@ -40,27 +40,29 @@ class BrandingFooter extends StatelessWidget {
     final showText =
         effectiveConfig.showText && effectiveConfig.text.isNotEmpty;
 
+    final footerChildren = <Widget>[
+      if (showText)
+        Text(
+          effectiveConfig.text,
+          style: Theme.of(context).textTheme.bodySmall,
+          textAlign: TextAlign.center,
+        ),
+      if (showText) const SizedBox(width: 8),
+      PoweredByLogo(
+        url: effectiveConfig.url,
+        clickable: effectiveConfig.clickable,
+        width: logoWidth,
+        height: logoHeight,
+      ),
+    ];
+
     return Padding(
       padding: padding,
       child: Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            if (showText)
-              Text(
-                effectiveConfig.text,
-                style: Theme.of(context).textTheme.bodySmall,
-                textAlign: TextAlign.center,
-              ),
-            if (showText) const SizedBox(width: 8),
-            PoweredByLogo(
-              url: effectiveConfig.url,
-              clickable: effectiveConfig.clickable,
-              width: logoWidth,
-              height: logoHeight,
-            ),
-          ],
+          children: footerChildren,
         ),
       ),
     );
